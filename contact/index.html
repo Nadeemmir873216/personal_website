@@ -6,198 +6,144 @@
 <title>Contact — Nadeem Ahmed Mir</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --bg1:#061425; --bg2:#0a1d33; --bg3:#09233f;
-    --text:#e9f1f7; --muted:#9fb3c8; --accent:#3ee3cc;
-    --glass-bg: rgba(255,255,255,0.06);
-    --glass-border: rgba(255,255,255,0.12);
-    --shadow: 0 14px 44px rgba(0,0,0,0.44);
-  }
-  @media (prefers-color-scheme: light){
-    :root{
-      --bg1:#e4f7ff; --bg2:#c9f2e2; --bg3:#bee9d4;
-      --text:#0c1a24; --muted:#4f646e; --accent:#2ecc94;
-      --glass-bg: rgba(255,255,255,0.72);
-      --glass-border: rgba(0,0,0,0.06);
-      --shadow: 0 12px 30px rgba(0,0,0,0.12);
-    }
-  }
-
-  *{box-sizing:border-box}
-  html,body{height:100%}
-  body{
-    margin:0;
-    font-family:Inter,system-ui,Roboto,Arial;
-    background:var(--bg2);
-    color:var(--text);
-    display:flex;
-    justify-content:center;
-    padding:34px;
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-  }
-
-  .wrap{ width:100%; max-width:980px; }
-
-  .header-row{ display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:18px; }
-  .back { color:var(--muted); text-decoration:none; font-size:14px; }
-
-  .panel{
-    background:var(--glass-bg);
-    border:1px solid var(--glass-border);
-    border-radius:16px;
-    padding:28px;
-    box-shadow:var(--shadow);
-    backdrop-filter: blur(16px) saturate(140%);
-  }
-
-  h1{ margin:0; font-size:28px; color:var(--accent); font-weight:800; }
-  p.lead{ color:var(--muted); margin-top:10px; margin-bottom:18px; line-height:1.5; }
-
-  form{ display:grid; gap:12px; grid-template-columns: 1fr 1fr; align-items:start; }
-  .full { grid-column: 1 / -1; display:flex; gap:12px; flex-direction:column; }
-  label{ font-size:13px; color:var(--muted); font-weight:700; }
-  input[type="text"], input[type="email"], textarea{
-    background: rgba(255,255,255,0.03);
-    border:1px solid var(--glass-border);
-    color:var(--text);
-    padding:10px 12px;
-    border-radius:10px;
-    font-size:14px;
-    outline:none;
-  }
-  textarea{ min-height:140px; resize:vertical; }
-  input::placeholder, textarea::placeholder{ color: color-mix(in srgb, var(--muted) 45%, transparent); }
-
-  .actions { display:flex; gap:12px; align-items:center; margin-top:6px; }
-  .btn{
-    display:inline-flex; align-items:center; gap:8px;
-    padding:10px 14px; border-radius:10px; border:none; cursor:pointer;
-    background:var(--accent); color:#000; font-weight:800; text-decoration:none;
-  }
-  .secondary{ background:transparent; border:1px solid var(--glass-border); color:var(--muted); font-weight:700; }
-
-  .note{ margin-top:10px; color:var(--muted); font-size:13px; }
-
-  .status{
-    margin-top:12px;
-    padding:12px;
-    border-radius:10px;
-    display:none;
-    font-weight:700;
-  }
-  .status.success{ background: color-mix(in srgb, var(--accent) 14%, transparent); color: var(--text); display:block; }
-  .status.error{ background: rgba(255,80,80,0.08); border:1px solid rgba(255,80,80,0.12); color:#ffb3b3; display:block; }
-
-  @media (max-width:780px){
-    form{ grid-template-columns: 1fr; }
-    .full{ grid-column:1 / -1; }
-  }
+:root{
+  --bg:#0b2030; --text:#eaf6f7; --muted:#9fb3c8; --accent:#3ee3cc;
+  --glass: rgba(255,255,255,0.04); --glass-border: rgba(255,255,255,0.08);
+}
+@media (prefers-color-scheme: light){
+  :root{ --bg:#f2fbf6; --text:#092028; --muted:#4f646e; --accent:#2ecc94; --glass: rgba(255,255,255,0.85); --glass-border: rgba(0,0,0,0.06); }
+}
+*{box-sizing:border-box} html,body{height:100%}
+body{font-family:Inter,system-ui; margin:0; background:var(--bg); color:var(--text); display:flex; align-items:center; justify-content:center; padding:28px;}
+.container{ width:100%; max-width:920px; }
+.panel{ background:var(--glass); border:1px solid var(--glass-border); border-radius:14px; padding:26px; box-shadow:0 12px 36px rgba(0,0,0,0.3); }
+h1{ margin:0 0 8px 0; color:var(--accent); font-size:26px; }
+.lead{ color:var(--muted); margin:0 0 16px 0; }
+form{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.full{ grid-column:1/-1; display:flex; flex-direction:column; gap:8px; }
+label{ font-size:13px; color:var(--muted); font-weight:700; }
+input, textarea{ background: rgba(255,255,255,0.02); border:1px solid var(--glass-border); color:var(--text); padding:10px 12px; border-radius:8px; font-size:14px; outline:none; }
+textarea{ min-height:140px; resize:vertical; }
+.actions{ display:flex; gap:12px; align-items:center; }
+.btn{ background:var(--accent); color:#000; padding:10px 14px; border-radius:10px; border:none; font-weight:800; cursor:pointer; }
+.secondary{ background:transparent; color:var(--muted); border:1px solid var(--glass-border); padding:9px 12px; border-radius:10px; text-decoration:none; display:inline-flex; align-items:center; }
+.status{ margin-top:12px; padding:12px; border-radius:10px; display:none; font-weight:700; }
+.status.ok{ display:block; background: color-mix(in srgb, var(--accent) 12%, transparent); color:var(--text); }
+.status.err{ display:block; background: rgba(255,80,80,0.08); color:#ffb3b3; border:1px solid rgba(255,80,80,0.12); }
+@media (max-width:780px){ form{ grid-template-columns: 1fr; } }
+.small{ font-size:13px; color:var(--muted); margin-top:8px; }
 </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="header-row">
-      <a class="back" href="/">← Back</a>
-      <!-- decorative switch placeholder, mirrors system theme visually -->
-      <div style="opacity:0.6; pointer-events:none;">
-        <div style="width:72px;height:36px;border-radius:999px;background:var(--glass-bg);border:1px solid var(--glass-border);display:flex;align-items:center;padding:6px;">
-          <div style="width:26px;height:26px;border-radius:50%;background:linear-gradient(180deg,var(--accent), color-mix(in srgb, var(--accent) 70%, black 10%));"></div>
-        </div>
+<div class="container">
+  <div class="panel" role="region" aria-labelledby="ctitle">
+    <div style="display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:12px;">
+      <div>
+        <h1 id="ctitle">Get in touch</h1>
+        <div class="lead">For AI/ML projects, freelance work, or quick questions — message me and I’ll reply soon.</div>
       </div>
+      <a class="secondary" href="/" aria-label="Back to home">← Home</a>
     </div>
 
-    <section class="panel" aria-labelledby="contactTitle">
-      <h1 id="contactTitle">Get in touch</h1>
-      <p class="lead">Hiring for AI/ML or a small startup project? Send a brief note — I reply fast. You can also email directly: <strong>hello@nadeemmir.com</strong></p>
+    <div id="status" class="status" role="status" aria-live="polite" style="display:none;"></div>
 
-      <!-- success message shown if ?sent=true redirected from formsubmit -->
-      <div id="urlSuccess" class="status success" style="display:none;">Thanks — message sent. I’ll reply soon.</div>
+    <form id="contactForm" autocomplete="on">
+      <!-- honeypot -->
+      <input type="text" name="hp" id="hp" style="display:none" autocomplete="off">
+      <label>
+        <div style="font-size:13px;color:var(--muted);font-weight:700;">Name</div>
+        <input name="from_name" id="from_name" required placeholder="Your full name">
+      </label>
 
-      <!-- form: posts to FormSubmit (no server required) -->
-      <form id="contactForm" method="POST" action="https://formsubmit.co/hello@nadeemmir.com">
-        <!-- FormSubmit extras -->
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_subject" value="New message from website contact form">
-        <input type="hidden" name="_next" value="/contact?sent=true">
+      <label>
+        <div style="font-size:13px;color:var(--muted);font-weight:700;">Email</div>
+        <input name="from_email" id="from_email" type="email" required placeholder="you@example.com">
+      </label>
 
+      <div class="full">
         <label>
-          <div style="font-size:13px;color:var(--muted);font-weight:700;">Your name</div>
-          <input type="text" name="name" placeholder="Your full name" required>
+          <div style="font-size:13px;color:var(--muted);font-weight:700;">Message</div>
+          <textarea name="message" id="message" required placeholder="Short description of the project or question"></textarea>
         </label>
+      </div>
 
-        <label>
-          <div style="font-size:13px;color:var(--muted);font-weight:700;">Email</div>
-          <input type="email" name="email" placeholder="your@email.com" required>
-        </label>
-
-        <div class="full">
-          <label>
-            <div style="font-size:13px;color:var(--muted);font-weight:700;">Message</div>
-            <textarea name="message" placeholder="What would you like to work on?" required></textarea>
-          </label>
-        </div>
-
-        <div class="full actions" style="justify-content:flex-start;">
-          <button type="submit" class="btn">Send Message</button>
-          <a class="btn secondary" href="mailto:hello@nadeemmir.com">Email directly</a>
-          <div id="formNote" class="note">By submitting, you agree to be contacted. Spam filtered.</div>
-        </div>
-
-        <div id="formStatus" class="status" aria-live="polite" style="display:none;"></div>
-      </form>
-    </section>
+      <div class="full actions">
+        <button class="btn" type="submit" id="sendBtn">Send</button>
+        <a class="secondary" id="mailFallback" href="mailto:hello@nadeemmir.com">Email directly</a>
+        <div class="small">Sends to <strong>hello@nadeemmir.com</strong>. No server required — needs EmailJS setup (steps below).</div>
+      </div>
+    </form>
   </div>
+</div>
 
+<!-- EmailJS SDK -->
+<script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
 <script>
-(function(){
-  // Show success message if redirected with ?sent=true
-  const params = new URLSearchParams(window.location.search);
-  if(params.get('sent') === 'true'){
-    document.getElementById('urlSuccess').style.display = 'block';
-    // scroll to it
-    setTimeout(()=> document.getElementById('urlSuccess').scrollIntoView({behavior:'smooth', block:'center'}), 120);
+/*
+  Replace the three placeholders below with your EmailJS values:
+  - SERVICE_ID (e.g. 'service_xxx')
+  - TEMPLATE_ID (e.g. 'template_xxx') — template should include variables: from_name, from_email, message
+  - USER_ID (public key, e.g. 'user_xxx')
+*/
+const SERVICE_ID = 'service_rhqfaxu';
+const TEMPLATE_ID = 'template_t1ya8ai';
+const USER_ID = 'tvH-RdgiMxn63aT03'; // EmailJS public key
+
+// initialize if IDs are present
+if(SERVICE_ID && TEMPLATE_ID && USER_ID && !SERVICE_ID.startsWith('YOUR')) {
+  emailjs.init(USER_ID);
+}
+
+const form = document.getElementById('contactForm');
+const status = document.getElementById('status');
+const sendBtn = document.getElementById('sendBtn');
+
+function showStatus(type, text) {
+  status.style.display = 'block';
+  status.className = 'status ' + (type === 'ok' ? 'ok' : 'err');
+  status.textContent = text;
+}
+
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+
+  // honeypot
+  if(document.getElementById('hp').value) return;
+
+  const name = document.getElementById('from_name').value.trim();
+  const email = document.getElementById('from_email').value.trim();
+  const message = document.getElementById('message').value.trim();
+
+  if(!name || !email || !message) {
+    showStatus('err','Please complete all fields.');
+    return;
   }
 
-  const form = document.getElementById('contactForm');
-  const statusBox = document.getElementById('formStatus');
+  // if EmailJS is configured, use it
+  if(typeof emailjs !== 'undefined' && SERVICE_ID && TEMPLATE_ID && USER_ID && !SERVICE_ID.startsWith('YOUR')) {
+    sendBtn.disabled = true;
+    sendBtn.textContent = 'Sending...';
+    const templateParams = { from_name: name, from_email: email, message: message };
 
-  // graceful JS submit handler (prettier UX)
-  form.addEventListener('submit', function(e){
-    // Let the browser perform standard submit for non-JS fallback
-    if(!window.fetch) return;
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams)
+      .then(function(){
+        showStatus('ok','Thanks — message sent. I will reply soon.');
+        form.reset();
+      }, function(err){
+        console.error('EmailJS error', err);
+        showStatus('err','Send failed. You can email directly to hello@nadeemmir.com');
+      }).finally(()=> {
+        sendBtn.disabled = false;
+        sendBtn.textContent = 'Send';
+      });
 
-    e.preventDefault();
+    return;
+  }
 
-    statusBox.style.display = 'block';
-    statusBox.className = 'status';
-    statusBox.textContent = 'Sending...';
-
-    const url = form.action;
-    const data = new FormData(form);
-
-    // Use fetch to post to FormSubmit
-    fetch(url, {
-      method: 'POST',
-      body: data,
-      headers: {
-        'Accept': 'application/json'
-      }
-    }).then(res => {
-      if (res.ok) {
-        // FormSubmit redirects (but fetch won't follow to _next). So we manually redirect to the _next location.
-        window.location.href = '/contact?sent=true';
-      } else {
-        return res.json().then(j => Promise.reject(j));
-      }
-    }).catch(err => {
-      statusBox.style.display = 'block';
-      statusBox.className = 'status error';
-      statusBox.textContent = 'Sorry — something went wrong. You can email directly to hello@nadeemmir.com';
-      console.error('form error', err);
-    });
-  });
-})();
+  // If EmailJS not configured, fallback to mailto (opens user mail client)
+  const mailto = `mailto:hello@nadeemmir.com?subject=${encodeURIComponent('Website message from ' + name)}&body=${encodeURIComponent('Name: ' + name + '\\nEmail: ' + email + '\\n\\n' + message)}`;
+  window.location.href = mailto;
+});
 </script>
 </body>
 </html>
